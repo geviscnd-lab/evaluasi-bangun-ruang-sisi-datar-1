@@ -10,54 +10,54 @@ EXCEL_PATH = "rekapan/hasil_evaluasi.xlsx"
 # === Data Soal (soal cerita kehidupan sehari-hari) ===
 soal_list = [
     {
-        "pertanyaan": "1. Sebuah akuarium berbentuk balok memiliki panjang 80 cm, lebar 40 cm, dan tinggi 50 cm. Jika akuarium diisi air penuh, berapa liter air yang dibutuhkan?",
-        "opsi": ["120 liter", "160 liter", "200 liter", "240 liter", "320 liter"],
-        "jawaban": "160 liter"
+        "pertanyaan": "1. Sebuah akuarium berbentuk balok berukuran panjang 60 cm, lebar 40 cm, dan tinggi 50 cm. Akuarium akan diisi air penuh. Berapa volume air yang dapat ditampung akuarium tersebut dalam liter? (1 liter = 1000 cm³) ?",
+        "opsi": ["100 liter", "120 liter", "130 liter", "140 liter", "150 liter"],
+        "jawaban": "120 liter"
     },
     {
-        "pertanyaan": "2. Sebuah tenda pramuka berbentuk prisma segitiga memiliki alas segitiga dengan panjang alas 4 m dan tinggi segitiga 3 m, serta panjang prisma 5 m. Hitung volume tenda tersebut!",
-        "opsi": ["25 m³", "30 m³", "35 m³", "40 m³", "45 m³"],
+        "pertanyaan": "2. Sebuah kotak kue berbentuk kubus memiliki panjang sisi 25 cm. Jika akan dilapisi kertas kado seluruh permukaan, berapa luas kertas minimal yang dibutuhkan?",
+        "opsi": ["2500 cm³", "3750 cm³", "4000 cm³", "4500 cm³", "5000 cm³"],
+        "jawaban": "4500 m³"
+    },
+    {
+        "pertanyaan": "3. Seorang tukang membuat atap rumah berbentuk limas segi empat beraturan dengan panjang sisi alas 6 m dan tinggi limas 4 m. Berapa volume atap yang dibuat?",
+        "opsi": ["36 m³", "40 m³", "48 m³", "50m³", "60 m³"],
+        "jawaban": "48 m³"
+    },
+    {
+        "pertanyaan": "4. Sebuah wadah mainan berbentuk balok memiliki ukuran 50 cm × 30 cm × 20 cm. Jika wadah ingin dicat seluruh sisinya bagian luar, berapa luas permukaan yang akan dicat?",
+        "opsi": ["4.600 cm²", "5000 m²", "5200 m²", "5600 m²", "6000 m²"],
+        "jawaban": "5600 m²"
+    },
+    {
+        "pertanyaan": "5. Sebuah tenda pramuka berbentuk prisma segitiga memiliki alas segitiga dengan alas 4 m, tinggi 3 m, dan panjang prisma 5 m. Berapa volume tenda tersebut?",
+        "opsi": ["25 m³", "27 m³", "28 m³", "30 m³", "35 m³"],
         "jawaban": "30 m³"
     },
     {
-        "pertanyaan": "3. Sebuah bak mandi berbentuk kubus dengan panjang rusuk 1 meter. Jika diisi penuh, berapa volume air di dalam bak mandi?",
-        "opsi": ["1 liter", "10 liter", "100 liter", "1000 liter", "1 m³"],
-        "jawaban": "1 m³"
+        "pertanyaan": "6. Sebuah miniatur menara berbentuk limas segi empat mempunyai panjang sisi alas 10 cm dan tinggi 15 cm. Berapa volume miniatur tersebut?",
+        "opsi": ["400 cm³", "450 cm³", "500 cm³", "550 cm³", "600 cm³"],
+        "jawaban": "500 cm³"
     },
     {
-        "pertanyaan": "4. Sebuah kardus berbentuk balok memiliki ukuran panjang 50 cm, lebar 30 cm, dan tinggi 40 cm. Berapa luas karton yang dibutuhkan untuk menutup seluruh permukaan kardus?",
-        "opsi": ["0.52 m²", "0.56 m²", "0.60 m²", "0.64 m²", "0.68 m²"],
-        "jawaban": "0.64 m²"
+        "pertanyaan": "7. Seorang tukang membuat tenda pesta berbentuk prisma segitiga. Jika luas alasnya 12 m² dan panjang prisma 8 m, berapa volume udara di dalam tenda?",
+        "opsi": ["80 m³", "85 m³", "90 m³", "96 m³", "100 m³"],
+        "jawaban": "96 m³"
     },
     {
-        "pertanyaan": "5. Sebuah menara air berbentuk tabung memiliki jari-jari 1,5 m dan tinggi 4 m. Hitung volume air di dalam menara!",
-        "opsi": ["18π m³", "20π m³", "25π m³", "30π m³", "35π m³"],
-        "jawaban": "18π m³"
+        "pertanyaan": "8. Sebuah atap limas segitiga memiliki alas berbentuk segitiga sama kaki dengan alas 10 m, tinggi segitiga 6 m, dan tinggi limas 8 m. Hitung volume atap tersebut!",
+        "opsi": ["80 m³", "100 m³", "120 m³", "160 m³", "200 m³"],
+        "jawaban": "100 m³"
     },
     {
-        "pertanyaan": "6. Sebuah kolam renang berbentuk balok berukuran 10 m × 4 m × 2 m. Jika 1 m³ setara dengan 1000 liter, berapa liter air yang dibutuhkan agar kolam penuh?",
-        "opsi": ["4000 liter", "8000 liter", "20000 liter", "40000 liter", "80000 liter"],
-        "jawaban": "80000 liter"
+        "pertanyaan": "9. Sebuah lemari berbentuk balok memiliki panjang 1,2 m, lebar 0,8 m, dan tinggi 2 m. Tukang kayu ingin menutup seluruh sisi luar lemari dengan lembaran kayu. Berapa luas kayu yang diperlukan?",
+        "opsi": ["7,68 m²", "8,0 m²", "8,32 m²", "8,64 m²", "9,0 m²"],
+        "jawaban": "7,68 m²"
     },
     {
-        "pertanyaan": "7. Sebuah tiang listrik berbentuk tabung dengan jari-jari 0,2 m dan tinggi 6 m. Hitung luas permukaan tiang!",
-        "opsi": ["7.2π m²", "7.5π m²", "8π m²", "8.4π m²", "9π m²"],
-        "jawaban": "8.4π m²"
-    },
-    {
-        "pertanyaan": "8. Sebuah dus kue berbentuk kubus memiliki panjang sisi 30 cm. Jika akan dilapisi kertas kado seluruhnya, berapa luas kertas minimal yang dibutuhkan?",
-        "opsi": ["0.36 m²", "0.40 m²", "0.48 m²", "0.54 m²", "0.60 m²"],
-        "jawaban": "0.54 m²"
-    },
-    {
-        "pertanyaan": "9. Sebuah tangki minyak berbentuk prisma segitiga dengan luas alas 2 m² dan tinggi 3 m. Berapa volume tangki minyak?",
-        "opsi": ["4 m³", "5 m³", "6 m³", "7 m³", "8 m³"],
-        "jawaban": "6 m³"
-    },
-    {
-        "pertanyaan": "10. Sebuah kemasan susu berbentuk balok dengan ukuran 10 cm × 6 cm × 20 cm. Jika 1 cm³ = 1 ml, berapa volume susu tersebut?",
-        "opsi": ["100 ml", "600 ml", "1200 ml", "2400 ml", "3000 ml"],
-        "jawaban": "1200 ml"
+        "pertanyaan": "10. Sebuah hiasan meja berbentuk kubus kecil dengan rusuk 10 cm akan dicat seluruh sisinya. Jika satu kaleng cat bisa menutupi 600 cm², berapa banyak kaleng cat minimal yang dibutuhkan untuk 10 hiasan meja?",
+        "opsi": ["2", "3", "4", "5", "6"],
+        "jawaban": "5"
     }
 ]
 
