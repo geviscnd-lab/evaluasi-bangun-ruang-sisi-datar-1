@@ -14,3 +14,9 @@ Streamlit app: Evaluasi Bangun Ruang Sisi Datar (10 soal cerita kehidupan sehari
 ## Notes
 - Untuk Codespaces / deployment, forward port dan pastikan folder `rekapan` writable.
 - Link relatif ke file `rekap/<filename>` disertakan pada panel guru (akses tergantung hosting).
+
+## 📊 Analisis Kemampuan Siswa (Google Colab)
+
+Notebook berikut digunakan untuk menganalisis hasil pekerjaan siswa:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/geviscnd-lab/evaluasi-bangun-ruang-sisi-datar-1/blob/main/analisis_kemampuan_siswa.ipynb)
