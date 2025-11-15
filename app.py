@@ -7,7 +7,7 @@ st.set_page_config(page_title="Evaluasi Bangun Ruang Sisi Datar", layout="center
 PASSWORD_GURU = "Guru125"
 EXCEL_PATH = "rekapan/hasil_evaluasi.xlsx"
 
-# === Data Soal (soal cerita kehidupan sehari-hari) ===
+# === Data Soal ===
 soal_list = [
     {
         "pertanyaan": "1. Sebuah akuarium berbentuk balok berukuran panjang 60 cm, lebar 40 cm, dan tinggi 50 cm. Akuarium akan diisi air penuh. Berapa volume air yang dapat ditampung akuarium tersebut dalam liter? (1 liter = 1000 cm³) ?",
@@ -66,14 +66,31 @@ st.title("🧮 Evaluasi Bangun Ruang Sisi Datar")
 
 role = st.radio("Pilih peran:", ["Siswa", "Guru"])
 
-# === Mode Guru ===
+# ===============================
+# === MODE GURU (+ tombol Colab)
+# ===============================
 if role == "Guru":
     password = st.text_input("Masukkan Password:", type="password")
+    
     if password == PASSWORD_GURU:
         st.success("Login Guru berhasil ✅")
+
+        # --- Tambahkan tombol "Open in Colab" ---
+        st.markdown("""
+        ### 📊 Analisis Kemampuan Siswa
+
+        Gunakan notebook Google Colab berikut untuk menganalisis hasil pengerjaan siswa:
+
+        <a href="https://colab.research.google.com/github/geviscnd-lab/evaluasi-bangun-ruang-sisi-datar-1/blob/main/analisis_kemampuan_siswa.ipynb" target="_blank">
+            <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab"/>
+        </a>
+        """, unsafe_allow_html=True)
+        # ------------------------------------------
+
         if os.path.exists(EXCEL_PATH):
             df = pd.read_excel(EXCEL_PATH)
             st.dataframe(df)
+
             with open(EXCEL_PATH, "rb") as f:
                 st.download_button("📥 Download Rekapan Excel", f, file_name="hasil_evaluasi.xlsx")
         else:
@@ -81,13 +98,14 @@ if role == "Guru":
     else:
         st.error("Password salah atau belum diisi.")
 
-# === Mode Siswa ===
+# ===============================
+# === MODE SISWA
+# ===============================
 elif role == "Siswa":
     nama = st.text_input("Nama Lengkap:")
     absen = st.text_input("Nomor Absen:")
     st.info("Jawablah semua soal berikut, pastikan semua jawaban terisi sebelum dikirim.")
     
-    # Input jawaban siswa
     jawaban_siswa = []
     for i, soal in enumerate(soal_list):
         jawaban = st.radio(soal["pertanyaan"], soal["opsi"], index=None, key=f"soal_{i}")
@@ -110,7 +128,6 @@ elif role == "Siswa":
             skor = round((benar / len(soal_list)) * 100, 2)
             st.success(f"✅ Jawaban terkirim! Nilai Anda: {skor}")
             
-            # Simpan ke Excel (1 file untuk semua siswa)
             data = {
                 "Nama": [nama],
                 "Absen": [absen],
@@ -119,6 +136,7 @@ elif role == "Siswa":
             }
 
             df_new = pd.DataFrame(data)
+
             if os.path.exists(EXCEL_PATH):
                 df_existing = pd.read_excel(EXCEL_PATH)
                 df_final = pd.concat([df_existing, df_new], ignore_index=True)
@@ -127,5 +145,5 @@ elif role == "Siswa":
             
             os.makedirs("rekapan", exist_ok=True)
             df_final.to_excel(EXCEL_PATH, index=False)
-            st.info("Jawaban Anda telah disimpan. Guru akan menilai keseluruhan hasil.")
 
+            st.info("Jawaban Anda telah disimpan. Guru akan menilai keseluruhan hasil.")
